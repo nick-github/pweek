@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h2>
+<%= @baby_animal.title %>
+</h2>
+<p>
+  <img src="<%= @baby_animal.img_url %>">
+</p>
+
+
+<p>
+  <strong>Title:</strong>
+  <%= @baby_animal.title %>
+</p>
+
+<p>
+  <strong>Img url:</strong>
+  <%= @baby_animal.img_url %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @baby_animal.description %>
+</p>
+
+<%= link_to 'Edit', edit_baby_animal_path(@baby_animal) %> |
+<%= link_to 'Back', baby_animals_path %>

@@ -1,0 +1,29 @@
+<div class="container">
+<div class="jumbotron">
+  <h1>Baby Animals!</h1>
+  <p>Adorable, fluffy, and <b>super</b> cute. Everything to lighten your day!</p>
+  <p><a href="<%= new_baby_animal_path %>" class="btn btn-primary btn-lg" role="button">Upload</a></p>
+  </div>
+</div>
+
+<% @baby_animals.each do |baby_animal| %>
+
+<div class="container">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3>
+    <%= baby_animal.title %>
+    </h3>
+  </div>
+  <div class="panel-body">
+    <img src="<%= baby_animal.img_url %>">
+  </div>
+  <div class="panel-footer">
+        <td><%= link_to 'Show', baby_animal %></td> |
+        <td><%= link_to 'Edit', edit_baby_animal_path(baby_animal) %></td> |
+        <td><%= link_to 'Destroy', baby_animal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </div>
+</div>
+</div>
+
+<% end %>
